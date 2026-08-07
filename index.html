@@ -8,8 +8,24 @@
 </head>
 <body>
 <canvas id="confetti"></canvas>
-<button class="music" id="musicBtn" onclick="toggleMusic()">♫</button>
-<audio id="music" loop><source src="music/birthday.mp3" type="audio/mpeg"></audio>
+<button
+    class="music"
+    id="musicBtn"
+    onclick="toggleMusic()">
+    ♫
+</button>
+
+<audio
+    id="music"
+    loop
+    autoplay
+    preload="auto">
+
+    <source
+        src="music/birthday.mp3"
+        type="audio/mpeg">
+
+</audio>
 
 <section class="page active" id="lock">
   <div class="content">
