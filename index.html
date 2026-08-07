@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Birthday Surprise ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<button class="music" id="musicBtn" onclick="toggleMusic()">♫</button>
+<audio id="music" loop><source src="music/birthday.mp3" type="audio/mpeg"></audio>
+
+<section class="page active" id="lock">
+  <div class="content">
+    <div class="icon">💗</div>
+    <div class="tag">A SURPRISE IS WAITING</div>
+    <h1>Enter the secret PIN</h1>
+    <p>Only someone special knows it ✨</p>
+    <div class="dots" id="dots"><i></i><i></i><i></i><i></i></div>
+    <div class="keypad">
+      <button onclick="press('1')">1</button><button onclick="press('2')">2</button><button onclick="press('3')">3</button>
+      <button onclick="press('4')">4</button><button onclick="press('5')">5</button><button onclick="press('6')">6</button>
+      <button onclick="press('7')">7</button><button onclick="press('8')">8</button><button onclick="press('9')">9</button>
+      <button onclick="clearPin()">C</button><button onclick="press('0')">0</button><button onclick="back()">⌫</button>
+    </div>
+    <div id="error"></div>
+  </div>
+</section>
+
+
+<section class="page" id="countdown">
+ <div class="content">
+  <div class="icon">🔐</div>
+  <div class="tag">PIN VERIFIED ❤️</div>
+  <h1>Your surprise is still locked</h1>
+  <p class="large">Something special is waiting for you 🎁</p>
+  <h2 class="unlock-date">08 September 2026 • 12:00 AM</h2>
+  <div class="countdown-grid">
+    <div><b id="days">00</b><span>Days</span></div>
+    <div><b id="hours">00</b><span>Hours</span></div>
+    <div><b id="minutes">00</b><span>Minutes</span></div>
+    <div><b id="seconds">00</b><span>Seconds</span></div>
+  </div>
+  <p class="wait-msg">“Good things are worth the wait…” 💕</p>
+  <p>🔒 Surprise unlocks on your birthday</p>
+ </div>
+</section>
+
+<section class="page" id="intro">
+  <div class="content">
+    <div class="icon">✨</div>
+    <div class="tag">UNLOCKED WITH LOVE</div>
+    <h1>Hey, Mita (gajrili)! 💕</h1>
+    <p class="large">Today isn't just another day...</p>
+    <p>It's the day the world got a little more beautiful.</p>
+    <button class="next" onclick="go('wish'); burst()">Open your surprise 🎁</button>
+  </div>
+</section>
+
+<section class="page scroll-page" id="wish">
+  <div class="content wide">
+    <div class="balloons">🎈 🎈 🎈</div>
+    <div class="tag">08 September • YOUR DAY</div>
+    <h1 class="birthday">Happy Birthday! 🎂</h1>
+    <p class="large">May your smile stay this bright, your dreams grow bigger, and every new day bring you a reason to be happy.</p>
+    <div class="photo">
+      <div class="photo-inner">
+        <span>📸</span><b>Add your favourite photo</b>
+        <small>Put photo1.jpg inside the images folder</small>
+      </div>
+    </div>
+    <button class="next" onclick="go('cake')">There's more... 💌</button>
+  </div>
+</section>
+
+<section class="page" id="cake">
+ <div class="content">
+  <div class="tag">MAKE A WISH</div><h1>One tiny wish first ✨</h1>
+  <div class="cakebox">
+    <div class="flame" id="flame" onclick="blow()"></div><div class="candle"></div>
+    <div class="cake"><div class="icing"></div><b>HAPPY<br>BIRTHDAY</b></div>
+  </div>
+  <p id="hint">Tap the candle flame to blow it out 🕯️</p>
+  <button class="next hidden" id="finalBtn" onclick="go('final');burst()">Read my message ❤️</button>
+ </div>
+</section>
+
+<section class="page scroll-page" id="final">
+ <div class="content">
+  <div class="icon pulse">❤️</div><div class="tag">JUST FOR YOU</div>
+  <h1>For Someone Special</h1>
+  <p class="letter">I hope this little surprise made you smile. On your birthday, I just want you to know how special you are. May this year bring beautiful memories, peaceful moments, lots of laughter, and everything your heart wishes for.</p>
+  <h2>Happy Birthday once again! 🎉</h2>
+  <p class="pink">Made with ❤️ just for you</p>
+  <button class="next" onclick="burst()">More confetti ✨</button>
+ </div>
+</section>
+<script src="script.js"></script>
+</body></html>
