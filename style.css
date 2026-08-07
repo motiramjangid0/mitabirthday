@@ -18,3 +18,9 @@ h2{font-size:clamp(22px,3vw,32px)}p{color:#cdbfd1;line-height:1.65;font-size:16p
 .countdown-grid div{padding:20px 8px;border:1px solid #ffffff20;border-radius:20px;background:#ffffff0b}
 .countdown-grid b{display:block;font-size:clamp(30px,6vw,55px);color:#ff91bc}.countdown-grid span{display:block;margin-top:7px;font-size:11px;letter-spacing:1px;color:#cdbfd1;text-transform:uppercase}.wait-msg{font-family:Georgia,serif;font-style:italic;font-size:19px;color:#f3dce9}
 @media(max-width:520px){.countdown-grid{gap:7px}.countdown-grid div{padding:15px 3px;border-radius:15px}.countdown-grid b{font-size:29px}.countdown-grid span{font-size:9px}}
+.birthday-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 22px;
+}

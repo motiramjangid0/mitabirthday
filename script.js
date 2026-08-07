@@ -11,7 +11,7 @@ function burst(){for(let i=0;i<130;i++)ps.push({x:innerWidth/2,y:innerHeight*.35
 (function anim(){x.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.r+=.08;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=`hsl(${(p.x+p.y)%360},85%,70%)`;x.fillRect(-p.s/2,-p.s/2,p.s,p.s);x.restore()});ps=ps.filter(p=>p.y<innerHeight+30);requestAnimationFrame(anim)})()
 
 // Birthday unlock time: 8 August 2026, 12:00 AM (visitor's local time)
-const BIRTHDAY = new Date(2026, 8, 8, 0, 0, 0);
+const BIRTHDAY = new Date(2026, 7, 8,8, 0, 0);
 let countdownTimer=null;
 function afterLogin(){
   if(new Date() >= BIRTHDAY){ go('intro'); burst(); }
